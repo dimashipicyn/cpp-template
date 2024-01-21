@@ -1,6 +1,10 @@
 {
     "clangd.arguments": [
         "-background-index",
-        "-compile-commands-dir=debug"
-    ]
+        "--clang-tidy",
+        "-j=2",
+        "-compile-commands-dir=${workspaceFolder}/out/"
+    ],
+    "cmake.copyCompileCommands": "${workspaceFolder}/out/compile_commands.json",
+    "cmake.configureOnOpen": true
 }
